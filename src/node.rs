@@ -462,6 +462,11 @@ mod wasm {
         }
 
         #[inline]
+        pub fn language(&self) -> Language {
+            self.inner.tree().get_language().into()
+        }
+
+        #[inline]
         pub fn named_child<'a>(&'a self, i: u32) -> Option<Self> {
             self.inner.named_child(i).map(Into::into)
         }
