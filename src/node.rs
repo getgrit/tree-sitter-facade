@@ -284,7 +284,7 @@ pub use native::*;
 
 #[cfg(target_arch = "wasm32")]
 mod wasm {
-    use crate::{input_edit::InputEdit, point::Point, range::Range, tree_cursor::TreeCursor};
+    use crate::{input_edit::InputEdit, language::Language, point::Point, range::Range, tree_cursor::TreeCursor};
     use std::{borrow::Cow, convert::TryFrom};
     use wasm_bindgen::{prelude::*, JsCast};
     use web_tree_sitter::SyntaxNode;
